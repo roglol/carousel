@@ -1,0 +1,19 @@
+html,body,#root{
+    height:100%;
+}
+body{
+    margin:0px;
+}
+.wrapper{
+    box-sizing:border-box;
+    padding: 2em;
+    background: #659DBD;
+    height:100%;
+}
+
+@media only screen and (max-width: 500px) {
+    .wrapper{
+        padding: 2em 0em;
+    }
+  }
+
