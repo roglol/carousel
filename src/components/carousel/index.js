@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SliderContainer from "./sliderContainer";
 import Slide from "./slide";
 import Dots from "./dots";
-import Arrow from "./arrow";
+import { LeftArrow, RightArrow } from "./arrow";
 
 const StyledContainer = styled.div`
   height: 100%;
@@ -194,15 +194,17 @@ const Carousel = ({ children, settings }) => {
           );
         })}
       </SliderContainer>
-      <Arrow
+      <LeftArrow
         dir={"left"}
         onClick={prevSlide}
+        count={slideCount}
         infinite={settings.infinite}
         currentSlide={currentSlide}
       />
-      <Arrow
+      <RightArrow
         dir={"right"}
         onClick={nextSlide}
+        count={slideCount}
         infinite={settings.infinite}
         currentSlide={currentSlide}
       />

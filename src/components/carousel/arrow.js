@@ -38,18 +38,19 @@ const StyledButton = styled.button`
   }
 `;
 
-const Arrow = (props) => {
+const LeftArrow = (props) => {
   return props.infinite || props.currentSlide > 1 ? (
     <StyledButton dir={props.dir} onClick={props.onClick}>
-      <div
-        className={
-          props.dir === "left"
-            ? "coreSpriteLeftChevron"
-            : "coreSpriteRightChevron"
-        }
-      ></div>
+      <div className="coreSpriteLeftChevron"></div>
+    </StyledButton>
+  ) : null;
+};
+const RightArrow = (props) => {
+  return props.infinite || props.currentSlide < props.count ? (
+    <StyledButton dir={props.dir} onClick={props.onClick}>
+      <div className="coreSpriteRightChevron"></div>
     </StyledButton>
   ) : null;
 };
 
-export default Arrow;
+export { LeftArrow, RightArrow };
