@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const SlideWrapper = styled.div`
 box-sizing:border-box;
 padding:10px;
 display: flex;
-min-width:${props => props.width}%;
+min-width:${(props) => props.width}%;
 justify-content: center;
   & > div {
-    width: 100%;
+    width: 100%; 
     height: 100%;
     justify-content: center;
     display: flex;
@@ -27,8 +27,12 @@ justify-content: center;
       padding:0px;
 };
 `;
-const Slide = ({children,width}) =>{
-    return <SlideWrapper data-role = {'slide-wrapper'} width={width}>{children}</SlideWrapper>
-}
+const Slide = ({ children, width }) => {
+  return (
+    <SlideWrapper data-role={"slide-wrapper"} width={width}>
+      {children}
+    </SlideWrapper>
+  );
+};
 
-export default Slide
+export default Slide;
